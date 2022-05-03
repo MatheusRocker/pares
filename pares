@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner leitor = new Scanner(System.in);
+    int numero;
+    int somaPares = 0;
+    int qtdePares = 0;
+    int k = 1;
+    while (k<=6) {
+      System.out.print("numero: ");
+      numero = leitor.nextInt();
+      if (numero % 2 == 0) {
+        somaPares = somaPares + numero;
+        qtdePares = qtdePares + 1;
+      }
+      k = k + 1;
+    }
+    float media = (float) somaPares / qtdePares;
+    System.out.println("soma dos pares:" + somaPares);
+    System.out.println("quantidade dos pares:" + qtdePares);
+    System.out.printf("media dos pares = %.2f/n",media);
+  }
+
+}
